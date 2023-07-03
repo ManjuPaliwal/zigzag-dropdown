@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZigZag DropDown</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav>
+        <h3 class="barnd">ZigZag</h3>
+        <button class="btn"><i class="fa fa-bars"></i></button>
+        <ul class="list">
+            <li class="item"><a href="#" class="link">Home</a></li>
+            <li class="item dropdown"><a href="#">Dropdown</a>
+               <ul class="dropdown-menu">
+                <li class="drop-item"><a href="#">dropdown</a></li>
+                <li class="drop-item"><a href="#">dropdown</a></li>
+                <li class="drop-item"><a href="#">dropdown</a></li>
+                <li class="drop-item"><a href="#">dropdown</a></li>
+                <li class="drop-item"><a href="#">dropdown</a></li>
+               </ul>
+            </li>
+            <li class="item"><a href="#" class="link">About</a></li>
+            <li class="item"><a href="#" class="link">ContactUS</a></li>
+            <li class="item"><a href="#" class="link">FeedBacks</a></li> </ul>
+        </nav> 
+ 
+        <script>
+    let btn = document.querySelector('.btn');
+    let list = document.querySelector('.list');
+    let dropdown = document.querySelector('.dropdown')
+    let dropitemMenu= document.querySelector('.dropdown-menu')
+    btn.addEventListener('click',function(){
+list.classList.toggle('displaytoggle')
+    })
+dropdown.addEventListener('click',function(){
+    dropitemMenu.classList.toggle('dropdown-menutoggle')
+})
+        </script>
+</body>
+
+</html>
+
+
+
+<!-- <nav class="navbar navbar-expand-md navbar-dark ">
+    <h2 class="navbar-brand">ZigZag</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsedNav"><span class="navbar-toggler-icon"></span></button>
+    <div id="collapsedNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="navbar-item"><a href="#" class="navbar-link">Link</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Link</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Link</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Link</a></li>
+        </ul>
+    </div>
+</nav> -->

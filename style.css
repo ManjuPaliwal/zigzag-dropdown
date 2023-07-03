@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+} */
+nav{
+    height:50px;
+    display: flex;
+    background-color: darkslategrey;
+    align-items: center;
+}
+h3{
+    font-family:  Helvetica, sans-serif;
+    font-weight: 700;
+    color: darkslategrey;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-left: 8px;
+}
+ .list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style:none;
+    padding-top: 15px;
+    margin-left: 20px;
+} 
+
+.item{
+    width: 170px;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-50deg);
+   
+}
+.item a{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transform: skew(50deg);
+
+}
+a:hover{
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.dropdown-menu{
+    position: absolute;
+    left: 100px;
+text-align: center;
+transform: skew(50deg);
+border: none;
+padding: 0; 
+ margin: 0;
+}
+.dropdown:hover .dropdown-menu{
+display: block;
+}
+.drop-item:nth-child(odd){
+    background-color: darkslategrey;
+    transform: skew(-50deg);
+    margin-right: 30px;
+}
+.drop-item:nth-child(even){
+    background-color: darkslategrey;
+    transform: skew(50deg);
+   margin-left: 30px;
+}
+.drop-item a{
+    display: block;
+    transform: skew(-50deg);
+    color: white;
+    padding: 8px;
+}
+.drop-item:nth-child(odd) a {
+    transform: skew(50deg);
+}
+.drop-item {
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.2),  -4px -4px 8px 0 rgba(255,255,255,0.2);
+}
+
+.item:hover,.drop-item:hover{
+    background-color: rgb(90, 29, 5);
+}
+
+.btn{
+    display: none;
+}
+
+@media screen  and (max-width:650px) {
+   nav{
+    display: flex;
+    justify-content: space-between;
+   }
+    .btn{
+       display: block;
+       color: white;
+       font-size: 20px;
+    }
+    .list{
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: -20px;
+        background-color: darkslategrey;
+    }
+  .displaytoggle{
+    display: block;
+  }
+    .item,
+    .item a,
+    .dropdown-menu,.drop-item, .drop-item a {
+      transform: none !important;
+      margin: none;
+    }
+    .drop-item:nth-child(odd),.drop-item:nth-child(even){
+        margin: 0;
+    }
+ .dropdown-menu{
+    background-color:darkslategrey;
+    top: 0;
+    left: 160px;
+ }
+ 
+    .dropdown-menutoggle{
+        display: block;
+    }
+}
